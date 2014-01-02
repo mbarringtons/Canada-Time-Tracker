@@ -1,1 +1,9 @@
+$body-bg:														#ecf0f1;
+
 @import 'bootstrap';
+
+// Below creates classes within bootstrap elements to allow them to be used inside of HTML page elements
+
+.center {
+	text-align: center;
+}
