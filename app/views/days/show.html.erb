@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Days in canada this year:</strong>
+  <%= @day.days_in_canada_this_year %>
+</p>
+
+<p>
+  <strong>Days in canada last year:</strong>
+  <%= @day.days_in_canada_last_year %>
+</p>
+
+<p>
+  <strong>Days in canada tax:</strong>
+  <%= @day.days_in_canada_tax %>
+</p>
+
+<%= link_to 'Edit', edit_day_path(@day) %> |
+<%= link_to 'Back', days_path %>

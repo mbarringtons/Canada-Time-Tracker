@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
+  has_one  :days
+         
   validates :name, presence: true
   
   validates_format_of :email, :with => /\A([^@\s]+)@(capgemini\.com)\z/

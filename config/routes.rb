@@ -1,4 +1,6 @@
 CanadaTimeTracker::Application.routes.draw do
+  resources :days
+
   devise_for :users
   
   root "pages#index"

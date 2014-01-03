@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  days_in_canada_this_year: 1
+  days_in_canada_last_year: 1
+  days_in_canada_tax: 1
+
+two:
+  days_in_canada_this_year: 1
+  days_in_canada_last_year: 1
+  days_in_canada_tax: 1

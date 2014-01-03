@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140102224702) do
+ActiveRecord::Schema.define(version: 20140103034824) do
+
+  create_table "days", force: true do |t|
+    t.integer  "days_in_canada_this_year"
+    t.integer  "days_in_canada_last_year"
+    t.integer  "days_in_canada_tax"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
