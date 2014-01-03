@@ -3,4 +3,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+         
+  validates :name, presence: true
+  
+  validates_format_of :email, :with => /\A([^@\s]+)@(capgemini\.com)\z/
 end
