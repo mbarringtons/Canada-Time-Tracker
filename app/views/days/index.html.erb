@@ -18,16 +18,18 @@
 
 		  <tbody>
 		    <% @days.each do |day| %>
-		      <tr>
-		        <td><%= day.days_in_canada_this_year %></td>
-		        <td><%= day.days_in_canada_last_year %></td>
-		        <td><%= day.days_in_canada_tax %></td>
-						<td><%= day.user.email if day.user %></td>
-		        <td><%= link_to 'Show', day %></td>
-		        <td><%= link_to 'Edit', edit_day_path(day) %></td>
-		        <td><%= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-		      </tr>
-		    <% end %>
+					<% if day.user == current_user %>
+		      	<tr>
+			        <td><%= day.days_in_canada_this_year %></td>
+			        <td><%= day.days_in_canada_last_year %></td>
+			        <td><%= day.days_in_canada_tax %></td>
+							<td><%= day.user.email if day.user %></td>
+			        <td><%= link_to 'Show', day %></td>
+			        <td><%= link_to 'Edit', edit_day_path(day) %></td>
+			        <td><%= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			      </tr>
+			    <% end %><!-- end conditional if -->
+				<% end %><!-- end going through all users -->
 		  </tbody>
 		</table>
 
