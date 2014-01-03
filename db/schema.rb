@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140103034824) do
+ActiveRecord::Schema.define(version: 20140103041314) do
 
   create_table "days", force: true do |t|
     t.integer  "days_in_canada_this_year"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20140103034824) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.string   "user_country"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

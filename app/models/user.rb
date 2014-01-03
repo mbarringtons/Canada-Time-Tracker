@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   has_one  :days
          
   validates :name, presence: true
+  validates :user_country, presence: true
   
   validates_format_of :email, :with => /\A([^@\s]+)@(capgemini\.com)\z/
 end

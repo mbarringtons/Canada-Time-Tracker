@@ -26,6 +26,13 @@
 					<%= f.label :password_confirmation %>
 				  <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm password here" %>
 				</div><!-- /.div form-group -->
+				
+        <div class="form-group">
+					<%= f.label :country %>
+					<div class="form-group">
+						<%= f.select :user_country, options_for_select([["USA", "USA"], ["France", "France"]]) %>
+					</div><!-- /.div selection -->
+				</div><!-- /.div country form-group -->
 
 			<div class="form-group">
 				<%= f.submit "Sign up", class: "btn btn-priamry" %>
