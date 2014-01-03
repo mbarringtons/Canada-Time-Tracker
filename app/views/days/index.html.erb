@@ -1,13 +1,15 @@
 <%= render 'pages/index' unless user_signed_in? %>
 
+<div class="jumbotron center">
 	<h1>Listing days</h1>
 
 		<table>
 		  <thead>
 		    <tr>
-		      <th>Days in canada this year</th>
-		      <th>Days in canada last year</th>
-		      <th>Days in canada tax</th>
+		      <th>Canada This Year</th>
+		      <th>Canada Last Year</th>
+		      <th>Taxable Days</th>
+					<th>User Id</th>
 		      <th></th>
 		      <th></th>
 		      <th></th>
@@ -20,6 +22,7 @@
 		        <td><%= day.days_in_canada_this_year %></td>
 		        <td><%= day.days_in_canada_last_year %></td>
 		        <td><%= day.days_in_canada_tax %></td>
+						<td><%= day.user.email if day.user %></td>
 		        <td><%= link_to 'Show', day %></td>
 		        <td><%= link_to 'Edit', edit_day_path(day) %></td>
 		        <td><%= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -31,3 +34,4 @@
 		<br>
 
 		<%= link_to 'New Day', new_day_path %>
+</div><!-- /. jumbotron -->
