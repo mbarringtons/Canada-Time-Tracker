@@ -3,7 +3,8 @@ CanadaTimeTracker::Application.routes.draw do
 
   devise_for :users
   
-  root "pages#index"
+  root  "days#index"
+  get   'how_it_works'  =>  'pages#how_it_works'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
